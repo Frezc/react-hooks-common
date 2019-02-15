@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "@qunhe/kjl-plugin_manual": "^1.6.2",
+    "@types/react": "^16.8.3",
+    "typescript": "^3.3.3"
+  },
+  "kjl-template": {
+    "plugins": {
+      "manual": "@qunhe/kjl-plugin_manual"
+    }
+  },
+  "manual": "2a28f284-c9ba-4077-8ba5-8b9cbc804b10",
+  "name": "react-hooks-common",
+  "version": "0.0.1",
+  "description": "some common react hooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "react-hooks"
+  ],
+  "author": "wanli",
+  "license": "MIT",
+  "dependencies": {
+    "@types/lodash": "^4.14.121",
+    "lodash": "^4.17.11",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
+  }
+}
