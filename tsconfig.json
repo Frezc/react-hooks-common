@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "noImplicitAny": false,
+    "target": "es5",
+    "pretty": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "outDir": "./lib"
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+    ".docz"
+  ]
+
+}
