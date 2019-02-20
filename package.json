@@ -1,24 +1,15 @@
 {
-  "devDependencies": {
-    "@types/react": "^16.8.3",
-    "docz": "^0.13.7",
-    "docz-theme-default": "^0.13.7",
-    "parcel-bundler": "^1.11.0",
-    "typescript": "^3.3.3"
-  },
-  "kjl-template": {
-    "plugins": {
-      "manual": "@qunhe/kjl-plugin_manual"
-    }
-  },
-  "manual": "2a28f284-c9ba-4077-8ba5-8b9cbc804b10",
-  "name": "react-hooks-common",
+  "name": "@qunhe/react-hooks-collection",
   "version": "0.0.1",
   "description": "some common react hooks",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "docz dev"
+    "start": "docz dev",
+    "build": "yarn build:types && babel src --out-dir lib --extensions .ts",
+    "build:types": "tsc --emitDeclarationOnly",
+    "prepublishOnly": "yarn build"
   },
   "keywords": [
     "react",
@@ -27,10 +18,30 @@
   "author": "wanli",
   "license": "MIT",
   "dependencies": {
-    "@types/lodash": "^4.14.121",
-    "lodash": "^4.17.11",
+    "react-use-promise": "^0.1.0",
+    "use-lodash-debounce-throttle": "^0.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/react": "^16.8.3",
+    "docz": "^0.13.7",
+    "docz-theme-default": "^0.13.7",
+    "parcel-bundler": "^1.11.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "use-lodash-debounce-throttle": "^0.1.0"
-  }
+    "typescript": "^3.3.3"
+  },
+  "kjl-template": {
+    "plugins": {
+      "manual": "@qunhe/kjl-plugin_manual"
+    }
+  },
+  "manual": "2a28f284-c9ba-4077-8ba5-8b9cbc804b10"
 }

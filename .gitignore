@@ -1,6 +1,5 @@
 
-## manual组件添加
-.docz/**
+.docz/
 node_modules/
 .cache/
-dist/
+lib/

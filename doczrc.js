@@ -1,5 +1,5 @@
 export default {
-  src: './src',
+  src: './doczsrc',
   title: 'react hooks common',
   typescript: true,
 }

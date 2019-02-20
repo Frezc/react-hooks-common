@@ -1,0 +1,59 @@
+---
+name: usePromise
+---
+
+import { Playground } from 'docz';
+import { useState, useEffect } from 'react';
+import { useDebounce } from 'use-lodash-debounce-throttle';
+
+# usePromise
+
+Since this module uses React's new [Hooks feature](https://reactjs.org/docs/hooks-intro.html),
+to try this out you'll need to install at least version `16.8.0`
+of `react` and `react-dom`:
+
+```sh
+$ yarn add react@^16.8.0 react-dom@^16.8.0
+```
+
+## Usage
+
+```js
+import React from 'react';
+import { usePromise } from 'react-hooks-common';
+
+function Example() {
+  const [result, error, state] = usePromise(
+    () => new Promise(resolve => {
+      setTimeout(() => resolve('foo'), 2000);
+    }),
+    []
+  );
+
+  return (
+    <div>
+      <p>{state}</p>
+      <p>{result || error}</p>
+    </div>
+  );
+}
+```
+import { usePromise } from '../src';
+
+<Playground>
+  {() => {
+    const [result, error, state] = usePromise(
+      () => new Promise(resolve => {
+        setTimeout(() => resolve('foo'), 2000);
+      }),
+      []
+    );
+
+    return (
+      <div>
+        <p>{state}</p>
+        <p>{result || error}</p>
+      </div>
+    );
+  }}
+</Playground>

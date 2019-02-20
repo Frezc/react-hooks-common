@@ -4,25 +4,21 @@
     "strictNullChecks": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "noUnusedParameters": false,
     "noUnusedLocals": true,
     "noImplicitAny": false,
-    "target": "es5",
+    "target": "esnext",
     "pretty": true,
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "outDir": "lib",
+    "declarationDir": "lib",
     "lib": [
       "dom",
       "es6"
     ],
-    "outDir": "./lib"
   },
-  "exclude": [
-    "node_modules",
-    "lib",
-    ".docz"
-  ]
-
+  "include": ["src/**/*"]
 }
