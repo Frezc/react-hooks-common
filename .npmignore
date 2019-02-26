@@ -1,0 +1,8 @@
+.docz
+doczsrc
+node_modules
+.babelrc
+.gitignore
+doczrc.js
+tsconfig.json
+yarn.lock

@@ -1,6 +1,6 @@
 {
   "name": "@qunhe/react-hooks-collection",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "some common react hooks",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -18,7 +18,7 @@
   "author": "wanli",
   "license": "MIT",
   "dependencies": {
-    "react-use-promise": "^0.1.0",
+    "react-use-promise": "^0.1.2",
     "use-lodash-debounce-throttle": "^0.1.0"
   },
   "peerDependencies": {

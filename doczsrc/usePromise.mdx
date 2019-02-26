@@ -42,7 +42,7 @@ import { usePromise } from '../src';
 
 <Playground>
   {() => {
-    const [result, error, state] = usePromise(
+    const [state, result = 'bar', error] = usePromise(
       () => new Promise(resolve => {
         setTimeout(() => resolve('foo'), 2000);
       }),
