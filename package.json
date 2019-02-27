@@ -1,6 +1,6 @@
 {
   "name": "@qunhe/react-hooks-collection",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "some common react hooks",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
