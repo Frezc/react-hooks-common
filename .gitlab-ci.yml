@@ -1,6 +1,6 @@
 
 uploaddoc:
-  image: registry.qunhequnhe.com/fe/node-yarn-git:8
+  image: registry.qunhequnhe.com/fe/node-yarn-bashzip
   only:
     - doc
   tags:
