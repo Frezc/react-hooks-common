@@ -39,10 +39,5 @@
     "react-dom": "^16.8.2",
     "typescript": "^3.3.3"
   },
-  "kjl-template": {
-    "plugins": {
-      "manual": "@qunhe/kjl-plugin_manual"
-    }
-  },
   "manual": "2a28f284-c9ba-4077-8ba5-8b9cbc804b10"
 }
