@@ -5,15 +5,13 @@ name: usePromise
 import { Playground } from 'docz';
 import { useState, useEffect } from 'react';
 import { useDebounce } from 'use-lodash-debounce-throttle';
+import { usePromise } from '../src';
 
 # usePromise
 
-Since this module uses React's new [Hooks feature](https://reactjs.org/docs/hooks-intro.html),
-to try this out you'll need to install at least version `16.8.0`
-of `react` and `react-dom`:
-
-```sh
-$ yarn add react@^16.8.0 react-dom@^16.8.0
+## API
+```ts
+function usePromise<Result = any>(promise: Promise<Result> | (() => Promise<Result>), deps?: any[]): ["pending" | "resolved" | "rejected", Result | undefined, Error];
 ```
 
 ## Usage
@@ -23,7 +21,7 @@ import React from 'react';
 import { usePromise } from '@qunhe/react-hooks-collection';
 
 function Example() {
-  const [result, error, state] = usePromise(
+  const [state, result, error] = usePromise(
     () => new Promise(resolve => {
       setTimeout(() => resolve('foo'), 2000);
     }),
@@ -38,21 +36,24 @@ function Example() {
   );
 }
 ```
-import { usePromise } from '../src';
+
+## example
 
 <Playground>
   {() => {
+    const [fetchTimes, updateFetchTimes] = useState(0);
     const [state, result = 'bar', error] = usePromise(
       () => new Promise(resolve => {
         setTimeout(() => resolve('foo'), 2000);
       }),
-      []
+      [fetchTimes]
     );
 
     return (
       <div>
         <p>{state}</p>
         <p>{result || error}</p>
+        <button onClick={() => updateFetchTimes(fetchTimes + 1)}>update promise</button>
       </div>
     );
   }}
