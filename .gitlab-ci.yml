@@ -10,4 +10,4 @@ uploaddoc:
     - kjl p i manual -g
     - yarn install
     - yarn build-doc
-    - kjl p manual publish
+    - kjl p manual upload --src .docz/dist
