@@ -1,0 +1,12 @@
+
+uploaddoc:
+  image: registry.qunhequnhe.com/fe/node-yarn-git:8
+  only:
+    - doc
+  tags:
+    - kube-runner
+  script:
+    - yarn global add @qunhe/def-cli
+    - kjl p i manual -g
+    - yarn build-doc
+    - kjl p manual publish
