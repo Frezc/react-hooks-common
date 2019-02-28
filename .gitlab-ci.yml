@@ -8,5 +8,6 @@ uploaddoc:
   script:
     - yarn global add @qunhe/def-cli
     - kjl p i manual -g
+    - yarn install
     - yarn build-doc
     - kjl p manual publish
