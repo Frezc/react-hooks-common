@@ -1,0 +1,25 @@
+---
+name: useInterval
+---
+
+# useInterval
+
+## Usage
+
+```jsx
+import React, { useState } from 'react';
+import { useInterval } from '@qunhe/react-hooks-collection';
+
+const Com = () => {
+  const [seconds, setSeconds] = useState(0);
+  useInterval(() => {
+    setSeconds(seconds + 1);
+  }, 1000, []);
+
+  return (
+    <div>
+      seconds: {seconds}
+    </div>
+  )
+}
+```

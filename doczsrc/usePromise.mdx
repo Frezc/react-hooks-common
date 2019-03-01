@@ -4,7 +4,6 @@ name: usePromise
 
 import { Playground } from 'docz';
 import { useState, useEffect } from 'react';
-import { useDebounce } from 'use-lodash-debounce-throttle';
 import { usePromise } from '../src';
 
 # usePromise
@@ -21,7 +20,7 @@ import React from 'react';
 import { usePromise } from '@qunhe/react-hooks-collection';
 
 function Example() {
-  const [state, result, error] = usePromise(
+  const [state, result = 'default value', error] = usePromise(
     () => new Promise(resolve => {
       setTimeout(() => resolve('foo'), 2000);
     }),
@@ -42,9 +41,9 @@ function Example() {
 <Playground>
   {() => {
     const [fetchTimes, updateFetchTimes] = useState(0);
-    const [state, result = 'bar', error] = usePromise(
+    const [state, result = 'loading', error] = usePromise(
       () => new Promise(resolve => {
-        setTimeout(() => resolve('foo'), 2000);
+        setTimeout(() => resolve('result'), 2000);
       }),
       [fetchTimes]
     );

@@ -1,0 +1,60 @@
+---
+name: useThrottle
+---
+
+import { Playground } from 'docz';
+import { useState, useEffect } from 'react';
+import { useThrottle } from '../src';
+
+# usePromise
+
+## API
+same as https://lodash.com/docs/4.17.11#throttle
+
+## Usage
+
+```js
+import React from 'react';
+import { useThrottle } from '@qunhe/react-hooks-collection';
+
+const Com = () => {
+  const debouncedChange = useThrottle((v) => {
+    sendMessage();
+  }, 500, { leading: false });
+
+  return (
+    <input
+      type="text"
+      onChange={(e) => {
+        debouncedChange(e.target.value)
+      }}
+    />
+  )
+}
+```
+
+## example
+
+<Playground>
+  {() => {
+    const [throttledValue, setThrottledValue] = useState('');
+    const throttleChange = useThrottle((v) => {
+      setThrottledValue(v);
+    }, 500, { leading: false });
+
+    return (
+      <div>
+        <input
+          type="text"
+          onChange={(e) => {
+            throttleChange(e.target.value)
+          }}
+        />
+        <div>
+          throttled value: {throttledValue}
+        </div>
+      </div>
+      
+    )
+  }}
+</Playground>

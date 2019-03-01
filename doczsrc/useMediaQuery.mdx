@@ -1,0 +1,23 @@
+---
+name: useMediaQuery
+---
+
+# useMediaQuery
+
+
+## Usage
+
+```jsx
+import React from 'react';
+import { useMediaQuery } from '@qunhe/react-hooks-collection';
+
+const Com = () => {
+  const { matches, mediaQueryList } = useMediaQuery('(min-width: 576px)');
+
+  return (
+    <div>
+      matches: {matches}
+    </div>
+  )
+}
+```

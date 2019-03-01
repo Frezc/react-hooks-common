@@ -3,3 +3,5 @@ export function usePromise<Result = any>(promise: Promise<Result> | (() => Promi
   const [result, error, state] = usePromiseRaw(promise, deps);
   return [state, result || undefined, error];
 }
+
+export { useDebounce, useThrottle } from 'use-lodash-debounce-throttle';

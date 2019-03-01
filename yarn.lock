@@ -9769,7 +9769,7 @@ url@^0.11.0:
 
 use-lodash-debounce-throttle@^0.1.0:
   version "0.1.0"
-  resolved "https://registry.npmjs.org/use-lodash-debounce-throttle/-/use-lodash-debounce-throttle-0.1.0.tgz#30f1e07c671e9604bdb6ec1224a5e3542b094dcf"
+  resolved "http://npm-registry.qunhequnhe.com/use-lodash-debounce-throttle/download/use-lodash-debounce-throttle-0.1.0.tgz#30f1e07c671e9604bdb6ec1224a5e3542b094dcf"
   integrity sha1-MPHgfGcelgS9tuwSJKXjVCsJTc8=
   dependencies:
     lodash "^4.17.11"

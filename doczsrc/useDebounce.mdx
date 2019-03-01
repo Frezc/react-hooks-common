@@ -1,0 +1,60 @@
+---
+name: useDebounce
+---
+
+import { Playground } from 'docz';
+import { useState, useEffect } from 'react';
+import { useDebounce } from '../src';
+
+# usePromise
+
+## API
+same as https://lodash.com/docs/4.17.11#debounce
+
+## Usage
+
+```js
+import React from 'react';
+import { useDebounce } from '@qunhe/react-hooks-collection';
+
+const Com = () => {
+  const debouncedChange = useDebounce((v) => {
+    postUpdate();
+  }, 500, { maxWait: 2000 });
+
+  return (
+    <input
+      type="text"
+      onChange={(e) => {
+        debouncedChange(e.target.value)
+      }}
+    />
+  )
+}
+```
+
+## example
+
+<Playground>
+  {() => {
+    const [debouncedValue, setDebouncedValue] = useState('');
+    const debouncedChange = useDebounce((v) => {
+      setDebouncedValue(v);
+    }, 500, { maxWait: 2000 });
+
+    return (
+      <div>
+        <input
+          type="text"
+          onChange={(e) => {
+            debouncedChange(e.target.value)
+          }}
+        />
+        <div>
+          debounced value: {debouncedValue}
+        </div>
+      </div>
+      
+    )
+  }}
+</Playground>
