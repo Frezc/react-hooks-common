@@ -23,3 +23,31 @@ const Com = () => {
   )
 }
 ```
+
+## example
+import { useState } from 'react';
+import { useInterval } from '../src';
+import { Playground } from 'docz';
+
+<Playground>
+  {() => {
+    const [seconds, setSeconds] = useState(0);
+    const [resetKey, setKey] = useState(0);
+    useInterval(() => {
+      setSeconds(seconds + 1);
+    }, 1000, [resetKey]);
+
+    function handleReset() {
+      // reset count
+      setSeconds(0);
+      // reset interval
+      setKey(resetKey + 1);
+    }
+    return (
+      <div>
+        <div>count: {seconds}</div>
+        <button onClick={handleReset}>reset</button>
+      </div>
+    );
+  }}
+</Playground>

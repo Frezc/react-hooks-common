@@ -1,6 +1,6 @@
 {
-  "name": "@qunhe/react-hooks-collection",
-  "version": "0.0.4",
+  "name": "react-hooks-common",
+  "version": "0.1.0",
   "description": "some common react hooks",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -14,13 +14,17 @@
   },
   "keywords": [
     "react",
-    "react-hooks"
+    "hooks",
+    "react-hooks",
+    "collection",
+    "common"
   ],
-  "author": "wanli",
+  "author": "frezc",
   "license": "MIT",
   "dependencies": {
     "react-use-promise": "^0.1.2",
-    "use-lodash-debounce-throttle": "^0.1.0"
+    "use-lodash-debounce-throttle": "^0.1.0",
+    "use-media": "^1.2.0"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

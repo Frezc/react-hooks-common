@@ -3,7 +3,7 @@ name: useMediaQuery
 ---
 
 # useMediaQuery
-
+dep: https://github.com/streamich/use-media
 
 ## Usage
 
@@ -12,12 +12,29 @@ import React from 'react';
 import { useMediaQuery } from '@qunhe/react-hooks-collection';
 
 const Com = () => {
-  const { matches, mediaQueryList } = useMediaQuery('(min-width: 576px)');
+  const matches = useMediaQuery('(min-width: 576px)');
 
   return (
     <div>
       matches: {matches}
     </div>
-  )
-}
+  );
+};
 ```
+
+## example
+import { useState } from 'react';
+import { useMediaQuery } from '../src';
+import { Playground } from 'docz';
+
+<Playground>
+  {() => {
+    const matches = useMediaQuery('(min-width: 1200px)');
+
+    return (
+      <div>
+        matches: {matches ? 'yes' : 'no'}
+      </div>
+    );
+  }}
+</Playground>

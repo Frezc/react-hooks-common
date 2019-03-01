@@ -1,6 +1,8 @@
 export default {
-  src: './doczsrc',
-  title: 'react hooks collection',
+  files: '**/*.{md,markdown,mdx}',
+  title: 'react hooks common',
   typescript: true,
-  base: '.'
+  base: '.',
+  hashRouter: true,
+  ignore: [],
 }

@@ -9774,6 +9774,11 @@ use-lodash-debounce-throttle@^0.1.0:
   dependencies:
     lodash "^4.17.11"
 
+use-media@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npmjs.org/use-media/-/use-media-1.2.0.tgz#d9f069f368af03686200907b7f0b1c651ce0469b"
+  integrity sha512-ENZOueMWkeRK14NU7kO7Oe/4eyg8lWN1oGySTZHvxoscIhwXt/iHRuE6kQSjOT5QgMS+3D+wBBYV5FzV4FWzXA==
+
 use@^3.1.0:
   version "3.1.1"
   resolved "http://npm-registry.qunhequnhe.com/use/download/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
