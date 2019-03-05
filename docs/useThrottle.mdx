@@ -1,26 +1,26 @@
 ---
-name: useDebounce
+name: useThrottle
 ---
 
 import { Playground } from 'docz';
 import { useState, useEffect } from 'react';
-import { useDebounce } from '../src';
+import { useThrottle } from '../src';
 
 # usePromise
 
 ## API
-same as https://lodash.com/docs/4.17.11#debounce
+same as https://lodash.com/docs/4.17.11#throttle
 
 ## Usage
 
 ```js
 import React from 'react';
-import { useDebounce } from '@qunhe/react-hooks-collection';
+import { useThrottle } from '@qunhe/rhc';
 
 const Com = () => {
-  const debouncedChange = useDebounce((v) => {
-    postUpdate();
-  }, 500, { maxWait: 2000 });
+  const debouncedChange = useThrottle((v) => {
+    sendMessage();
+  }, 500, { leading: false });
 
   return (
     <input
@@ -37,21 +37,21 @@ const Com = () => {
 
 <Playground>
   {() => {
-    const [debouncedValue, setDebouncedValue] = useState('');
-    const debouncedChange = useDebounce((v) => {
-      setDebouncedValue(v);
-    }, 500, { maxWait: 2000 });
+    const [throttledValue, setThrottledValue] = useState('');
+    const throttleChange = useThrottle((v) => {
+      setThrottledValue(v);
+    }, 500, { leading: false });
 
     return (
       <div>
         <input
           type="text"
           onChange={(e) => {
-            debouncedChange(e.target.value)
+            throttleChange(e.target.value)
           }}
         />
         <div>
-          debounced value: {debouncedValue}
+          throttled value: {throttledValue}
         </div>
       </div>
       

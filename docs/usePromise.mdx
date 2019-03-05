@@ -18,7 +18,7 @@ function usePromise<Result = any>(promise: Promise<Result> | (() => Promise<Resu
 
 ```js
 import React from 'react';
-import { usePromise } from '@qunhe/react-hooks-collection';
+import { usePromise } from '@qunhe/rhc';
 
 function Example() {
   const [state, result = 'default value', error] = usePromise(

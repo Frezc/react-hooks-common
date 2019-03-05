@@ -10,7 +10,7 @@
     "noImplicitAny": false,
     "target": "esnext",
     "pretty": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "outDir": "lib",

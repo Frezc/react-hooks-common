@@ -8,9 +8,12 @@ order: 100
 
 React hooks collections for common usage.
 
+## Demo
+http://manual.k8s-new.qunhequnhe.com/react-hooks-common
+
 ## Install
 ```sh
-yarn add react-hooks-common
+yarn add @qunhe/rhc
 ```
 
 Since this module uses React's new [Hooks feature](https://reactjs.org/docs/hooks-intro.html),
