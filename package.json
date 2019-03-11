@@ -1,13 +1,14 @@
 {
-  "name": "@qunhe/rhc",
+  "name": "react-hooks-common",
   "version": "0.1.0",
-  "description": "some common react hooks",
+  "description": "some common react hooks collection",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "docz dev",
-    "build-doc": "docz build",
+    "build:doc": "docz build",
+    "pub:doc": "npm run build:doc && gh-pages -d .docz/dist",
     "build": "yarn build:types && babel src --out-dir lib --extensions .ts",
     "build:types": "tsc --emitDeclarationOnly",
     "prepublishOnly": "yarn build"
@@ -40,9 +41,11 @@
     "@types/react": "^16.8.3",
     "docz": "^0.13.7",
     "docz-theme-default": "^0.13.7",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "typescript": "^3.3.3"
   },
-  "manual": "2a28f284-c9ba-4077-8ba5-8b9cbc804b10"
+  "manual": "2a28f284-c9ba-4077-8ba5-8b9cbc804b10",
+  "repository": "git@github.com:Frezc/react-hooks-common.git"
 }

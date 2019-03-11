@@ -11,14 +11,17 @@ depend on https://github.com/bsonntag/react-use-promise, but **API CHANGED**.
 
 ## API
 ```ts
-function usePromise<Result = any>(promise: Promise<Result> | (() => Promise<Result>), deps?: any[]): ["pending" | "resolved" | "rejected", Result | undefined, Error];
+function usePromise<Result = any>(
+  promise: Promise<Result> | (() => Promise<Result>),
+  deps?: any[]
+) : ["pending" | "resolved" | "rejected", Result | undefined, Error];
 ```
 
 ## Usage
 
 ```js
 import React from 'react';
-import { usePromise } from '@qunhe/rhc';
+import { usePromise } from 'react-hooks-common';
 
 function Example() {
   const [state, result = 'default value', error] = usePromise(

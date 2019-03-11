@@ -5,11 +5,22 @@ name: useMediaQuery
 # useMediaQuery
 dep: https://github.com/streamich/use-media
 
+## API
+```typescript
+function useMedia(
+  rawQuery: string | MediaQueryObject,
+  defaultState: boolean = false
+) : boolean;
+```
+- `rawQuery`: Regular query string `"(min-width: 400px)"` or object like `{ minWidth: 400 }` is available.
+- `defaultState`: Value before component mounted.
+- **return**: matches
+
 ## Usage
 
 ```jsx
 import React from 'react';
-import { useMediaQuery } from '@qunhe/rhc';
+import { useMediaQuery } from 'react-hooks-common';
 
 const Com = () => {
   const matches = useMediaQuery('(min-width: 576px)');

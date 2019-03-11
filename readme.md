@@ -13,7 +13,7 @@ http://manual.k8s-new.qunhequnhe.com/react-hooks-common
 
 ## Install
 ```sh
-yarn add @qunhe/rhc
+yarn add react-hooks-common
 ```
 
 Since this module uses React's new [Hooks feature](https://reactjs.org/docs/hooks-intro.html),

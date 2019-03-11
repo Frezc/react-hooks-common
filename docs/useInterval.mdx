@@ -3,12 +3,20 @@ name: useInterval
 ---
 
 # useInterval
+Wrapper for setInterval. IntervalFn will be auto cleared when unmount or reset.
+
+## API
+```typescript
+function useInterval(fn: Function, delay: number, deps?: any[], ...params: any[]): void;
+```
+- `fn` & `delay` & `params`: same as [setInterval](https://developer.mozilla.org/ja/docs/Web/API/Window/setInterval)
+- `deps`: same as [useEffect](https://reactjs.org/docs/hooks-reference.html#conditionally-firing-an-effect). it's useful to reset setInterval.(see example)
 
 ## Usage
 
 ```jsx
 import React, { useState } from 'react';
-import { useInterval } from '@qunhe/rhc';
+import { useInterval } from 'react-hooks-common';
 
 const Com = () => {
   const [seconds, setSeconds] = useState(0);

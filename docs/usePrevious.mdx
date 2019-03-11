@@ -1,0 +1,53 @@
+---
+name: usePrevious
+---
+
+# usePrevious
+Get variable in previous render.
+
+Code from https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state
+
+## API
+```typescript
+function usePrevious<T>(value: T): T | undefined;
+```
+- `value`: variable in current render
+- **return**: variable in previous render
+
+## Usage
+
+```jsx
+import React, { useState } from 'react';
+import { usePrevious } from 'react-hooks-common';
+
+const Com = () => {
+  const [value, setValue] = useState('');
+  const previous = usePrevious(value);
+
+  return (
+    <div>
+      <input type="text" value={value} onChange={e => setValue(e.target.value)}/>
+      <div>previous: {previous}</div>
+    </div>
+  );
+};
+```
+
+## example
+import { useState } from 'react';
+import { usePrevious } from '../src';
+import { Playground } from 'docz';
+
+<Playground>
+  {() => {
+    const [value, setValue] = useState('');
+    const previous = usePrevious(value);
+
+    return (
+      <div>
+        <input type="text" value={value} onChange={e => setValue(e.target.value)}/>
+        <div>previous: {previous}</div>
+      </div>
+    );
+  }}
+</Playground>
