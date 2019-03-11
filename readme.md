@@ -1,8 +1,3 @@
----
-name: readme
-route: /
-order: 100
----
 
 # Readme
 

@@ -4,5 +4,4 @@ export default {
   typescript: true,
   base: '.',
   hashRouter: true,
-  ignore: [],
 }
