@@ -1,8 +1,10 @@
 .docz
-doczsrc
+docs
 node_modules
 .babelrc
 .gitignore
+.gitlab-ci.yml
 doczrc.js
 tsconfig.json
 yarn.lock
+src

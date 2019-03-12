@@ -5,6 +5,9 @@ order: 99
 
 # HISTORY
 
+## 0.2.1
+- reduce package size.
+
 ## 0.2.0
 - add `useDidUpdate`
 

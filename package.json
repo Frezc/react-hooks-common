@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-common",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "some common react hooks collection",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,7 +9,7 @@
     "start": "docz dev",
     "build:doc": "docz build",
     "pub:doc": "npm run build:doc && gh-pages -d .docz/dist",
-    "build": "yarn build:types && babel src --out-dir lib --extensions .ts",
+    "build": "rimraf ./lib && yarn build:types && babel src --out-dir lib --extensions .ts",
     "build:types": "tsc --emitDeclarationOnly",
     "prepublishOnly": "yarn build"
   },
@@ -44,6 +44,7 @@
     "gh-pages": "^2.0.1",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "rimraf": "^2.6.3",
     "typescript": "^3.3.3"
   },
   "manual": "2a28f284-c9ba-4077-8ba5-8b9cbc804b10",
