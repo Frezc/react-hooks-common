@@ -1,0 +1,70 @@
+---
+name: useDidUpdate
+---
+
+# useDidUpdate
+Run an effect only on updates. You can use this as an alternative to componentDidUpdate.
+
+## API
+```typescript
+function useDidUpdate(fn: Function, deps?: any[]): void;
+```
+- `fn` & `deps`: same as useEffect, but passing `[]` to `deps` will cause `fn` never be invoked.
+
+## Usage
+
+```js
+import React, { useState } from 'react';
+import { useDidUpdate, usePrevious } from 'react-hooks-common';
+
+const Com = () => {
+  const [value, setValue] = useState('');
+  const previousValue = usePrevious(value);
+  useDidUpdate(() => {
+    console.log(`Input from ${previousValue} to ${value}`);
+  });
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value)
+        }}
+      />
+    </div>
+    
+  );
+}
+```
+
+## example
+
+import { Playground } from 'docz';
+import { useState } from 'react';
+import { useDidUpdate, usePrevious } from '../src';
+
+<Playground>
+  {() => {
+    const [value, setValue] = useState('');
+    const previousValue = usePrevious(value);
+    useDidUpdate(() => {
+      console.log(`Input from ${previousValue} to ${value}`);
+    }, []);
+
+    return (
+      <div>
+        <input
+          type="text"
+          value={value}
+          onChange={(e) => {
+            setValue(e.target.value)
+          }}
+        />
+        <div>see console</div>
+      </div>
+      
+    )
+  }}
+</Playground>

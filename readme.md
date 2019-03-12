@@ -3,8 +3,8 @@
 
 React hooks collections for common usage.
 
-## Demo
-http://manual.k8s-new.qunhequnhe.com/react-hooks-common
+## Dco & Demo
+https://frezc.github.io/react-hooks-common
 
 ## Install
 ```sh
