@@ -3,7 +3,7 @@
 
 React hooks collections for common usage.
 
-## Dco & Demo
+## Doc & Demo
 https://frezc.github.io/react-hooks-common
 
 ## Install

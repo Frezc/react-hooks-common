@@ -8,3 +8,5 @@ doczrc.js
 tsconfig.json
 yarn.lock
 src
+coverage
+tests
