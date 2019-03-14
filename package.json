@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
     "start": "docz dev",
     "build:doc": "docz build",
     "pub:doc": "npm run build:doc && gh-pages -d .docz/dist",

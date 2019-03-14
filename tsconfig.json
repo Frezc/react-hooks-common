@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "jsx": "preserve",
+    "allowJs": true,
     "noUnusedParameters": false,
     "noUnusedLocals": true,
     "noImplicitAny": false,

@@ -21,7 +21,7 @@ import { useInterval } from 'react-hooks-common';
 const Com = () => {
   const [seconds, setSeconds] = useState(0);
   useInterval(() => {
-    setSeconds(seconds + 1);
+    setSeconds(seconds => seconds + 1);
   }, 1000, []);
 
   return (
@@ -42,7 +42,7 @@ import { Playground } from 'docz';
     const [seconds, setSeconds] = useState(0);
     const [resetKey, setKey] = useState(0);
     useInterval(() => {
-      setSeconds(seconds + 1);
+      setSeconds(seconds => seconds + 1);
     }, 1000, [resetKey]);
 
     function handleReset() {
