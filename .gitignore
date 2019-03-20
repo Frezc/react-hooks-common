@@ -4,3 +4,5 @@ node_modules/
 .cache/
 lib/
 coverage
+es/
+types/

@@ -18,3 +18,10 @@ of `react` and `react-dom`:
 ```sh
 yarn add react@^16.8.0 react-dom@^16.8.0
 ```
+
+## Dev
+```
+yarn install
+yarn start
+```
+Feel free to submit issues or pull requests.

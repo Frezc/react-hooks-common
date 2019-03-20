@@ -5,6 +5,9 @@ order: 99
 
 # HISTORY
 
+## 0.2.2
+- bugfix: change wait & option of useDebounce & useThrottle not working
+
 ## 0.2.1
 - reduce package size.
 

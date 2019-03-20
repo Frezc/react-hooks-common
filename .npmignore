@@ -7,6 +7,5 @@ node_modules
 doczrc.js
 tsconfig.json
 yarn.lock
-src
 coverage
 tests

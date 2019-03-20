@@ -1,5 +1,5 @@
 import { cleanup, renderHook } from 'react-hooks-testing-library';
-import { usePrevious } from '../src';
+import usePrevious from '../src/use-previous';
 
 afterEach(cleanup);
 

@@ -1,5 +1,5 @@
 import { cleanup, renderHook, act } from 'react-hooks-testing-library';
-import { useInterval } from '../src';
+import useInterval from '../src/use-interval';
 import { useState } from 'react';
 
 afterEach(cleanup);
