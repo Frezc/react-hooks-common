@@ -34,7 +34,7 @@ const Com = () => {
 ```
 
 ## example
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePrevious } from '../src';
 import { Playground } from 'docz';
 
@@ -49,5 +49,17 @@ import { Playground } from 'docz';
         <div>previous: {previous}</div>
       </div>
     );
+  }}
+</Playground>
+
+<Playground>
+  {() => {
+    const [selectedStatuses, setSelected] = useState([]);
+    useEffect(() => {
+      console.log(selectedStatuses);
+    }, [selectedStatuses]);
+    return (
+      <button onClick={() => { setSelected([]) }}>aa</button>
+    )
   }}
 </Playground>

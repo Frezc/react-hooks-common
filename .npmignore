@@ -1,7 +1,6 @@
 .docz
 docs
 node_modules
-.babelrc
 .gitignore
 .gitlab-ci.yml
 doczrc.js
@@ -9,3 +8,6 @@ tsconfig.json
 yarn.lock
 coverage
 tests
+.cache
+jest.config.js
+.babelrc.js
