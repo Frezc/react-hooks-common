@@ -5,6 +5,9 @@ order: 99
 
 # HISTORY
 
+## 0.2.5
+- fix type files missing
+
 ## 0.2.3 & 0.2.4
 - add `useStableMemo`
 - bugfix & feature: use `useStableMemo` to refactor useDebounce & useThrottle.
