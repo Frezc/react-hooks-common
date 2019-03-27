@@ -1,0 +1,53 @@
+---
+name: useDimensions
+---
+
+import { Playground } from 'docz';
+import { useState, useEffect } from 'react';
+import { useDimensions } from '../src';
+
+# useDimensions
+useDimensions is a React Hook for measuring DOM nodes. You can use it to measure any element in your DOM. Try resizing this window to watch useDimensions update measurements live.
+[See more](https://github.com/Swizec/useDimensions)
+
+## API
+```typescript
+function useDimensions<T extends Element = Element>(): [
+  (T) => void,
+  DOMRect | {},
+  T
+];
+```
+
+## Usage
+
+```js
+import React from 'react';
+import { useDimensions } from 'react-hooks-common';
+
+const MeasuredNode = () => {
+  const [ref, { x, y, width, height }] = useDimensions();
+
+  return (
+    <p ref={ref}>
+      I am a paragraph at ({x}px, {y}px) position with a width of {width}px
+      and height of {height}px
+    </p>
+  );
+};
+```
+
+## example
+
+<Playground>
+  {() => {
+    const [ref, { x, y, width, height }] = useDimensions();
+
+    return (
+      <p ref={ref}>
+        I am a paragraph at ({x}px, {y}px) position with a width of {width}px
+        and height of {height}px
+      </p>
+    );
+  }}
+</Playground>

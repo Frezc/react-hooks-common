@@ -4,3 +4,4 @@ export { default as useInterval } from './use-interval';
 export { default as useMediaQuery } from 'use-media';
 export { default as usePrevious } from './use-previous';
 export { default as useDidUpdate } from './use-did-update';
+export { default as useDimensions } from './use-dimensions';

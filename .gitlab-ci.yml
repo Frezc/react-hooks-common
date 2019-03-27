@@ -1,13 +1,11 @@
 
 uploaddoc:
   image: registry.qunhequnhe.com/fe/node-yarn-bashzip
-  only:
-    - doc
   tags:
     - kube-runner
   script:
     - yarn global add @qunhe/def-cli
     - kjl p i manual -g
     - yarn install
-    - yarn build-doc
+    - yarn build:doc
     - kjl p manual upload --src .docz/dist

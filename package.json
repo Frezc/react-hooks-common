@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-common",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "some common react hooks collection",
   "main": "lib/index.js",
   "browser": "es/index.js",
@@ -32,6 +32,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.3.4",
+    "react-use-dimensions": "^1.1.2",
     "react-use-promise": "^0.1.2",
     "use-lodash-debounce-throttle": "^0.3.3",
     "use-media": "^1.2.0"
