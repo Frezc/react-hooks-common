@@ -1,0 +1,69 @@
+---
+name: useCount
+---
+
+# useCount
+This hook is useful as alternative of `forceUpdate` and `resetKey`. See [Usage](#usage) below.
+
+## API
+```typescript
+function useCount(initialCount: number | (() => number) = 0): [number, (offset: number) => void];
+```
+- `initialCount`: same as paramter in `useState`, but only number permitted.
+- **return**: Second element 
+
+## Usage
+
+### Alternative of `forceUpdate`
+```js
+import React from 'react';
+import { useCount } from 'react-hooks-common';
+
+const Com = () => {
+  const [_, forceUpdate] = useCount();
+
+  return (
+    <p>
+      <button onClick={forceUpdate}>forceUpdate</button>
+    </p>
+  );
+};
+```
+
+### Simple `resetKey`
+```js
+import React from 'react';
+import { useCount } from 'react-hooks-common';
+
+const Com = () => {
+  const [key, updateKey] = useCount();
+
+  return (
+    <p>
+      <OtherComponent key={key} />
+      <button onClick={updateKey}>
+        refresh component
+      </button>
+    </p>
+  );
+};
+```
+
+## example
+import { useState } from 'react';
+import { useCount } from '../src';
+import { Playground } from 'docz';
+
+<Playground>
+  {() => {
+    const [count, increase] = useCount();
+
+    return (
+      <p>
+        current count: {count}
+        <br/>
+        <button onClick={increase}>increase</button>
+      </p>
+    );
+  }}
+</Playground>

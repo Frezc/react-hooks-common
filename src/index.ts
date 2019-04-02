@@ -6,3 +6,4 @@ export { default as usePrevious } from './use-previous';
 export { default as useDidUpdate } from './use-did-update';
 export { default as useDimensions } from './use-dimensions';
 export { default as useStorageState } from './use-storage-state';
+export { default as useCount } from './use-count';

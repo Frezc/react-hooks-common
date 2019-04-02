@@ -5,6 +5,9 @@ order: 99
 
 # HISTORY
 
+## 0.3.1
+- add `useCount`
+
 ## 0.3.0
 - add `useStorageState`
 
