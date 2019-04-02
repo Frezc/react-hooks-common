@@ -5,6 +5,9 @@ order: 99
 
 # HISTORY
 
+## 0.3.2
+- fix type of `useCount`
+
 ## 0.3.1
 - add `useCount`
 
