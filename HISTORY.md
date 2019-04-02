@@ -5,6 +5,9 @@ order: 99
 
 # HISTORY
 
+## 0.3.0
+- add `useStorageState`
+
 ## 0.2.6
 - add `useDimensions`
 

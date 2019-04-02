@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-common",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "some common react hooks collection",
   "main": "lib/index.js",
   "browser": "es/index.js",

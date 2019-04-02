@@ -1,0 +1,68 @@
+---
+name: useStorageState
+---
+
+# useStorageState
+Combine `useState` with `localStorage` is easy, you can write below codes in a minute.
+```javascript
+function useStorage(key, initialValue) {
+  const [state, setState] = useState(() => localStorage.getItem(key) || initialValue);
+  return [
+    state,
+    (value) => {
+      setState(value);
+      localStorage.setItem(key, value);
+    }
+  ];
+}
+```
+
+But if you need to use updater function in `setState` and `initialValue`, or reload when key changed, it will be more complex.
+This hook will help you to get rid of complex codes.
+
+## API
+```typescript
+type SetStateAction<S> = S | ((prevState: S) => S);
+function useStorageState<S>(key: string): [S | null, (updater: SetStateAction<S | null>) => void];
+function useStorageState<S>(key: string, initialState: S | (() => S)): [S, (updater: SetStateAction<S>) => void];
+```
+- `key`: used as key of localStorage, state will be reset when key changed.
+- `initialState`: same as paramter in `useState`.
+
+
+## Usage
+
+```js
+import React from 'react';
+import { useStorageState } from 'react-hooks-common';
+
+const Com = () => {
+  const [count, setCount] = useStorageState('PERSISTENT_COUNT', () => 25);
+
+  return (
+    <p>
+      persistent count: {count}
+      <button onClick={() => setCount(c => c + 1)}>increase</button>
+    </p>
+  );
+};
+```
+
+## example
+import { useState } from 'react';
+import { useStorageState } from '../src';
+import { Playground } from 'docz';
+
+<Playground>
+  {() => {
+    const [count, setCount] = useStorageState('PERSISTENT_COUNT', () => 25);
+
+    return (
+      <p>
+        persistent count: {count}
+        <br/>
+        <button onClick={() => setCount(c => c + 1)}>increase</button>
+      </p>
+    );
+  }}
+</Playground>
