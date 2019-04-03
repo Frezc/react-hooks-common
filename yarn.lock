@@ -7069,9 +7069,10 @@ react-use-dimensions@^1.1.2:
   dependencies:
     react-fast-compare "^2.0.4"
 
-react-use-promise@^0.1.2:
-  version "0.1.2"
-  resolved "http://npm-registry.qunhequnhe.com/react-use-promise/download/react-use-promise-0.1.2.tgz#ee603c66874073bc6280c3ff7617ffbf2897d0a2"
+react-use-promise-alternative@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/react-use-promise-alternative/-/react-use-promise-alternative-0.2.0.tgz#c52166b01b9cafa4945c08f80cdd81ce1e9845d4"
+  integrity sha512-QPOWQ83zdSp5OmCA6llEwpKuh1JTRVatERwYwKTjuCAwj0p0YlbxlVKRFe6KezRq8x49LBG0N7AOGUDZARt8tw==
 
 react@^16.7.0, react@^16.8.2:
   version "16.8.2"

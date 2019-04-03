@@ -5,6 +5,9 @@ order: 99
 
 # HISTORY
 
+## 0.3.3
+- Persistent result when recall promise
+
 ## 0.3.2
 - fix type of `useCount`
 
