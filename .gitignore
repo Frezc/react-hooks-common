@@ -6,3 +6,4 @@ lib/
 coverage
 es/
 types/
+yarn.lock
