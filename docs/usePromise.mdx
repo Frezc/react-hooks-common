@@ -13,10 +13,11 @@ Depend on https://github.com/bsonntag/react-use-promise, but **API CHANGED**.
 ## API
 ```ts
 function usePromise<Result = any>(
-  promise: Promise<Result> | (() => Promise<Result>),
+  promise: Promise<Result> | Result | (() => (Promise<Result> | Result)),
   deps?: any[]
 ) : ["pending" | "resolved" | "rejected", Result | undefined, Error];
 ```
+- if `promise` is not `Promise` or return type is not `Promise`, value will be returned and state will be set to `resolved`
 
 ## Usage
 
