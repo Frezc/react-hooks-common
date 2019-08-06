@@ -53,6 +53,8 @@ function Example() {
       }),
       [fetchTimes]
     );
+    const [state1] = usePromise(() => undefined, []);
+    console.log('state1', state1)
 
     return (
       <div>

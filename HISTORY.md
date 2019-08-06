@@ -5,13 +5,13 @@ order: 99
 
 # HISTORY
 
-## 0.3.6
+## ~~0.3.6~~ 0.3.7
 - upgrade react-use-promise-alternative@0.2.1-alt: allow non-promise in usePromise.
 
 ## 0.3.5
 - upgrade use-lodash-debounce-throttle@0.3.5 to fix type and upgrade lodash-es
 
-## 0.3.3 & 0.3.4
+## ~~0.3.3~~ 0.3.4
 - Persistent result when recall promise
 
 ## 0.3.2
