@@ -26,5 +26,7 @@ yarn add react@^16.8.0 react-dom@^16.8.0
 ```
 yarn install
 yarn start
+
+# open http://localhost:3000
 ```
 Feel free to submit issues or pull requests.

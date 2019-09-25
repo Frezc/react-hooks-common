@@ -1,0 +1,61 @@
+---
+name: useDebounceValue
+---
+
+import { Playground } from 'docz';
+import { useState, useEffect } from 'react';
+import { useDebounceValue } from '../src';
+
+# useDebounceValue
+
+Wrap useDebounce for Debouncing a value.
+
+## API
+```ts
+function useDebounceValue<T>(rawValue: T, wait?: number, options?: DebounceSettings, deps?: readonly any[]): T
+```
+`DebounceSettings` is same as https://lodash.com/docs/4.17.11#debounce
+
+## Usage
+
+```js
+import React from 'react';
+import { useDebounceValue } from 'react-hooks-common';
+
+const Com = () => {
+  const [rawValue, setRawValue] = useState(0);
+  const debounceValue = useDebounceValue(rawValue, 200);
+
+  return (
+    <>
+      <button
+        onClick={(e) => {
+          setRawValue((v) => v + 1)
+        }}
+      />
+      Debounce value: {debounceValue}
+    </>
+  )
+}
+```
+
+## example
+
+<Playground>
+  {() => {
+    const [rawValue, setRawValue] = useState(0);
+    const debounceValue = useDebounceValue(rawValue, 200);
+
+    return (
+      <>
+        <button
+          onClick={(e) => {
+            setRawValue((v) => v + 1)
+          }}
+        >+ 1</button>
+        <p>Raw value: {rawValue}</p>
+        <p>Debounce value: {debounceValue}</p>
+      </>
+    )
+  }}
+</Playground>

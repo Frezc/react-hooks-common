@@ -5,6 +5,9 @@ order: 99
 
 # HISTORY
 
+## 0.3.8
+- add [useDebounceValue](https://frezc.github.io/react-hooks-common/#/docs-use-debounce-value).
+
 ## ~~0.3.6~~ 0.3.7
 - upgrade react-use-promise-alternative@0.2.1-alt: allow non-promise in usePromise.
 
